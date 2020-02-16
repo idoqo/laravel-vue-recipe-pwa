@@ -3,7 +3,10 @@ require('./bootstrap');
 window.Vue = require('vue');
 
 import VueRouter from 'vue-router';
-import ExampleComponent from "./components/ExampleComponent";
+
+import App from './components/App'
+import Home from "./components/Home";
+import Recipe from './components/Recipe'
 
 Vue.use(VueRouter);
 
@@ -13,13 +16,18 @@ const router = new VueRouter({
         {
             path: '/',
             name: 'home',
-            component: ExampleComponent
+            component: Home
+        },
+        {
+            path: '/recipes/:id',
+            name: 'recipe',
+            component: Recipe
         }
     ]
 });
 
 const app = new Vue({
     el: '#app',
-    components: {ExampleComponent},
+    components: {App},
     router
 });
