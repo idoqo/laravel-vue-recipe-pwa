@@ -14,8 +14,7 @@ use Illuminate\Http\Request;
 */
 
 Route::group(['prefix' => 'recipes'], function() {
+    Route::get('/{id}', 'RecipeController@getRecipe');
     Route::get('/', 'RecipeController@index');
     Route::post('/', 'RecipeController@store');
-
-    Route::get('/{id}', 'RecipeController@getRecipe');
 });
