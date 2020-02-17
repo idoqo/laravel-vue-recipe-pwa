@@ -2,12 +2,13 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-md-8" v-for="recipe,index in recipes" :key="recipe.id">
-                <div class="card">
-                    <h4 class="card-header">{{recipe.title}}</h4>
-                    <div class="card-body">
-                        <p class="card-text">{{recipe.body}}</p>
-                        <a href="#" class="btn btn-primary">Read More</a>
-                    </div>
+                <div class="my-4">
+                    <h5>
+                        <router-link :to="{ name: 'recipe', params: {recipeId: recipe.id}}">
+                            {{recipe.title}}
+                        </router-link>
+                    </h5>
+                    <small class="text-muted">Posted on: {{recipe.created_at}}</small>
                 </div>
             </div>
         </div>
@@ -32,6 +33,7 @@
                     this.recipes.push({
                         id: data.id,
                         body: data.body.slice(0, 100) + '...',
+                        created_at: data.created_at,
                         title: data.title
                     })
                 });
