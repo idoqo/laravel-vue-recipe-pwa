@@ -1,0 +1,19 @@
+{
+    "name": "Recipe PWA",
+    "short_name": "Recipe PWA",
+    "icons": [
+        {
+              "src": "/fox-icon.png",
+              "sizes": "192x192",
+              "type": "image/png"
+            }
+    ],
+    "start_url": "/",
+    "scope": ".",
+    "display": "standalone",
+    "background_color": "#fff",
+    "theme_color": "#000",
+    "description": "You favorite recipe app",
+    "dir": "ltr",
+    "lang": "en-US"
+}
