@@ -6,8 +6,6 @@ use App\Recipe;
 use Illuminate\Broadcasting\InteractsWithSockets;
 use Illuminate\Foundation\Events\Dispatchable;
 use Illuminate\Queue\SerializesModels;
-use Illuminate\Support\Facades\Log;
-use Twilio\Rest\Client;
 
 class RecipeEvent
 {
@@ -18,7 +16,6 @@ class RecipeEvent
     public function __construct(Recipe $recipe)
     {
         $this->recipe = $recipe;
-        Log::info("Recipe Created: ".$recipe);
     }
 
     public function broadcastOn()
