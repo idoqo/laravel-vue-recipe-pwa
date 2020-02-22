@@ -3,10 +3,13 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Notifications\Notifiable;
 use League\CommonMark\CommonMarkConverter;
 
 class Recipe extends Model
 {
+    use Notifiable;
+
     protected $fillable = ['title', 'body'];
 
     public static function getBodyAttribute($value) {
@@ -16,4 +19,8 @@ class Recipe extends Model
         ]);
         return $converter->convertToHtml($value);
     }
+
+    protected $dispatchesEvents = [
+        'saved' => \App\Events\RecipeEvent::class
+    ];
 }
