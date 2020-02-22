@@ -24,5 +24,10 @@
     </div>
 </template>
 <script>
-    export default {}
+    import { initializeFirebase } from "../notifications";
+    export default {
+        created() {
+            initializeFirebase();
+        }
+    }
 </script>

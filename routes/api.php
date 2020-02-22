@@ -13,6 +13,10 @@ use Illuminate\Http\Request;
 |
 */
 
+Route::post('/register-token', 'SPAController@createBinding');
+
+Route::get('test-notification', 'SPAController@sendNotification');
+
 Route::group(['prefix' => 'recipes'], function() {
     Route::get('/{id}', 'RecipeController@getRecipe');
     Route::get('/', 'RecipeController@index');
