@@ -1,21 +1,6 @@
 <?php
 
-use Illuminate\Http\Request;
-
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| is assigned the "api" middleware group. Enjoy building your API!
-|
-*/
-
-Route::post('/register-token', 'SPAController@createBinding');
-
-Route::get('test-notification', 'SPAController@sendNotification');
+Route::post('/register-token', 'NotificationsController@createBinding');
 
 Route::group(['prefix' => 'recipes'], function() {
     Route::get('/{id}', 'RecipeController@getRecipe');

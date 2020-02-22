@@ -8,14 +8,14 @@ class RecipesTableSeeder extends Seeder
     {
         \App\Recipe::insert([
             [
-                'title' => "Afang Soup Recipe",
-                'body' => "Boil the beef and Kanda with diced onions",
+                'title' => "Nigerian Jollof Rice with Chicken",
+                'body' => "Test Recipe. Chicken is first sauteed on the stove top to produce a wonderful aromatic base for the rice.",
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ],
             [
-                'title' => "White Moi Moi",
-                'body' => "Blend beans with crushed stock cubes",
+                'title' => "Ghana Demerara Brownies",
+                'body' => "Test Recipe. Preheat oven to 325 degrees F (165 degrees C). Lightly butter a 9x13-inch baking dish. ",
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ]
