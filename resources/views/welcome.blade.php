@@ -7,12 +7,13 @@
     <title>Recipe PWA</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="manifest" href="manifest.json" />
 </head>
 <body>
 <div id="app">
     <app></app>
 </div>
+<script src="{{mix('js/app.js')}}"></script>
 <script>
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
@@ -20,6 +21,5 @@
         });
     }
 </script>
-<script src="{{mix('js/app.js')}}"></script>
 </body>
 </html>

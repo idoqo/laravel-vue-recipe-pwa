@@ -1,6 +1,6 @@
 <?php
 
-Route::post('/register-token', 'NotificationsController@createBinding');
+Route::post('/register-token', 'NotificationController@createBinding');
 
 Route::group(['prefix' => 'recipes'], function() {
     Route::get('/{id}', 'RecipeController@getRecipe');

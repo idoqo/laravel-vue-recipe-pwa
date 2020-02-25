@@ -14,8 +14,10 @@ class RecipesTableSeeder extends Seeder
                 'updated_at' => \Carbon\Carbon::now()
             ],
             [
-                'title' => "Ghana Demerara Brownies",
-                'body' => "Test Recipe. Preheat oven to 325 degrees F (165 degrees C). Lightly butter a 9x13-inch baking dish. ",
+                'title' => "Chicken Suya Salad",
+                'body' => "- Cut the yam tuber into 1 inch slices. - Peel and cut the slices into half moons.
+                        - Wash the slices, place in a pot and pour water to cover the contents.
+                        - Boil till the yam is soft.",
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
             ]

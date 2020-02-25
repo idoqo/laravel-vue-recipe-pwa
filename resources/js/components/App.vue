@@ -3,7 +3,7 @@
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">
                 <router-link :to="{name: 'home'}" class="navbar-brand">Recipe PWA</router-link>
-                <button class="navbar-toggler" type="button" dat-toggle="collapse"
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false">
                     <span class="navbar-toggler-icon"></span>
@@ -24,9 +24,10 @@
     </div>
 </template>
 <script>
-    import { initializeFirebase } from "../notifications";
+    import { initializeFirebase } from "../notification";
     export default {
         created() {
+            console.log(process.env.MIX_FIREBASE_PROJECT_ID);
             initializeFirebase();
         }
     }

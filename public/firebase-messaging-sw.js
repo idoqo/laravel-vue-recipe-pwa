@@ -1,24 +1,21 @@
 importScripts("https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js");
 importScripts("https://www.gstatic.com/firebasejs/6.4.0/firebase-messaging.js");
 
-let firebaseConfig = {
+let config = {
     apiKey: "AIzaSyARBvceffvi7LPj5t-WOzogMknh9-RRRg8",
-    authDomain: "recipe-pwa-6dbda.firebaseapp.com",
-    databaseURL: "https://recipe-pwa-6dbda.firebaseio.com",
     projectId: "recipe-pwa-6dbda",
-    storageBucket: "recipe-pwa-6dbda.appspot.com",
     messagingSenderId: "564055728232",
     appId: "1:564055728232:web:e6a510d2402ddb471e5bdd",
-    measurementId: "G-F2JH8HM25G"
 };
-firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(config);
 const messaging = firebase.messaging();
 console.log(messaging.getToken());
 messaging.setBackgroundMessageHandler(function (payload) {
     console.log(' Received background message ', payload);
     let title = 'Recipe PWA',
         options = {
-            body: "Hello world"
+            body: "New Recipe Alert",
+            icon: "https://raw.githubusercontent.com/idoqo/laravel-vue-recipe-pwa/master/public/recipe-book.png"
         };
     return self.registration.showNotification(
         title,

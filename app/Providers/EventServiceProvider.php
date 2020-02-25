@@ -16,7 +16,7 @@ class EventServiceProvider extends ServiceProvider
      */
     protected $listen = [
         'App\Events\RecipeEvent' => [
-            'App\Listeners\BroadcastNotification'
+            'App\Listeners\RecipeEventListener'
         ],
     ];
 

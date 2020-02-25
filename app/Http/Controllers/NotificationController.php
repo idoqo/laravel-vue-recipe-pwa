@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Log;
 use PHPUnit\Exception;
 use Twilio\Rest\Client;
 
-class NotificationsController extends Controller
+class NotificationController extends Controller
 {
     public function createBinding(Request $request) {
         $client = new Client(getenv('TWILIO_API_KEY'), getenv('TWILIO_API_SECRET'),

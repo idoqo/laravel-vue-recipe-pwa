@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Log;
 use Twilio\Exceptions\TwilioException;
 use Twilio\Rest\Client;
 
-class BroadcastNotification
+class RecipeEventListener
 {
     public function __construct()
     {

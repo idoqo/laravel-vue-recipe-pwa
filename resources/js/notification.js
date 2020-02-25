@@ -18,19 +18,14 @@ const registerToken = (token) => {
 
 export function initializeFirebase() {
     if (firebase.messaging.isSupported()) {
-        const config = {
+        let config = {
             apiKey: "AIzaSyARBvceffvi7LPj5t-WOzogMknh9-RRRg8",
-            authDomain: "recipe-pwa-6dbda.firebaseapp.com",
-            databaseURL: "https://recipe-pwa-6dbda.firebaseio.com",
             projectId: "recipe-pwa-6dbda",
-            storageBucket: "recipe-pwa-6dbda.appspot.com",
             messagingSenderId: "564055728232",
             appId: "1:564055728232:web:e6a510d2402ddb471e5bdd",
-            measurementId: "G-F2JH8HM25G"
         };
         firebase.initializeApp(config);
         const messaging = firebase.messaging();
-        //messaging.requestPermission()
         messaging.requestPermission()
             .then(() => {
                     return messaging.getToken();
@@ -43,20 +38,5 @@ export function initializeFirebase() {
             .catch(error => {
                 console.error('Error: ', error);
             });
-
-        messaging.onMessage((payload) => {
-            let sender = "Michael";
-            console.log(JSON.parse(payload.data.twi_body));
-            let title = "Recipe PWA",
-                options = {
-                    body: "hello world",
-                    icon: "https://raw.githubusercontent.com/mdn/pwa-examples/master/a2hs/icon/fox-icon.png"
-                };
-            let notification = new Notification(title, options);
-            notification.onclick = (event) => {
-                notification.close();
-                console.log(event);
-            }
-        });
     }
 }

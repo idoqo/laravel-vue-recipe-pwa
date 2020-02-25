@@ -13,6 +13,13 @@ class UsersTableSeeder extends Seeder
                 'password' => "super_secret",
                 'created_at' => \Carbon\Carbon::now(),
                 'updated_at' => \Carbon\Carbon::now()
+            ],
+            [
+                'name' => "Jeff Doe",
+                'email' => "jdoe@example.com",
+                'password' => "super_secret",
+                'created_at' => \Carbon\Carbon::now(),
+                'updated_at' => \Carbon\Carbon::now()
             ]
         ]);
     }

@@ -1,3 +1,2 @@
 <?php
-
-Route::get('/{any}', 'Controller@index')->where('any', '.*');
+Route::get('/{any}', 'SPAController@index')->where('any', '.*');
