@@ -28,7 +28,7 @@
             axios.defaults.headers.common['Content-type'] = "application/json";
             axios.defaults.headers.common['Accept'] = "application/json";
 
-            axios.get('api/recipes').then(response => {
+            axios.get('/api/recipes').then(response => {
                 response.data.forEach((data) => {
                     this.recipes.push({
                         id: data.id,

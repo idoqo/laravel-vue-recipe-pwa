@@ -3,7 +3,6 @@ import axios from 'axios';
 import 'firebase/messaging';
 
 const registerToken = (token) => {
-    console.log("axios here:");
     axios.post('/api/register-token', {
         token: token
     }, {
