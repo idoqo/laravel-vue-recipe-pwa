@@ -1,15 +1,15 @@
-importScripts("https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js");
-importScripts("https://www.gstatic.com/firebasejs/6.4.0/firebase-messaging.js");
+importScripts("https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js");
+importScripts("https://www.gstatic.com/firebasejs/7.8.2/firebase-messaging.js");
 
 let config = {
-    apiKey: "AIzaSyARBvceffvi7LPj5t-WOzogMknh9-RRRg8",
-    projectId: "recipe-pwa-6dbda",
-    messagingSenderId: "564055728232",
-    appId: "1:564055728232:web:e6a510d2402ddb471e5bdd",
+    apiKey: "AIzaSyAsa8XqeVjHSu1R0oQYiu3bo57jtBx230E",
+    authDomain: "notifier-fccd5.firebaseapp.com",
+    projectId: "notifier-fccd5",
+    messagingSenderId: "240088011234",
+    appId: "1:240088011234:web:247054ae2ce907a90269bb",
 };
 firebase.initializeApp(config);
 const messaging = firebase.messaging();
-console.log(messaging.getToken());
 messaging.setBackgroundMessageHandler(function (payload) {
     console.log(' Received background message ', payload);
     let title = 'Recipe PWA',
@@ -21,8 +21,4 @@ messaging.setBackgroundMessageHandler(function (payload) {
         title,
         options
     );
-});
-self.addEventListener('notificationclick', function (event) {
-    event.notification.close();
-    //handle click event onClick on Web Push Notification
 });
