@@ -90,20 +90,14 @@
             initializeFirebase() {
                 if (firebase.messaging.isSupported()) {
                     let config = {
-                        apiKey: "AIzaSyAsa8XqeVjHSu1R0oQYiu3bo57jtBx230E",
-                        authDomain: "notifier-fccd5.firebaseapp.com",
-                        databaseURL: "https://notifier-fccd5.firebaseio.com",
-                        projectId: "notifier-fccd5",
-                        storageBucket: "notifier-fccd5.appspot.com",
-                        messagingSenderId: "240088011234",
-                        appId: "1:240088011234:web:247054ae2ce907a90269bb",
-                        measurementId: "G-LQBTDD6FBB"
+                        apiKey: "FIREBASE_API_KEY",
+                        authDomain: "FIREBASE_AUTH_DOMAIN",
+                        projectId: "FIREBASE_PROJECT_ID",
+                        messagingSenderId: "FIREBASE_MESSENGER_ID",
+                        appId: "FIREBASE_APP_ID",
                     };
                     firebase.initializeApp(config);
                     const messaging = firebase.messaging();
-                    messaging.usePublicVapidKey(
-                        "BJyYCCg-pvIRMITFv6gBh1987dNeFL2yd9fSnyPiTludWU1vOMXfEh79vBWz2gF4-oe51jwXEihAkKhxdvOGwPY"
-                    );
 
                     messaging.getToken()
                         .then((token) => {
